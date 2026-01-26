@@ -1,0 +1,22 @@
+[project]
+name = "infinit_restaurant"
+version = "0.0.1"
+description = "Restaurant Management Module for Infinit Platform"
+authors = [
+    {name = "Maxnate Africa", email = "dev@maxnate.com"}
+]
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+
+dependencies = [
+    "frappe",
+]
+
+[build-system]
+requires = ["flit_core >=3.4,<4"]
+build-backend = "flit_core.buildapi"
+
+[tool.bench.frappe-dependencies]
+frappe = ">=15.0.0"
+erpnext = ">=15.0.0"
