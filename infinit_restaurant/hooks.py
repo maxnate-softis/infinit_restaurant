@@ -107,14 +107,13 @@ app_version = "0.0.1"
 # Document Events
 # ---------------
 # Hook on document methods and events
-
-# doc_events = {
-#	"*": {
-#		"on_update": "method",
-#		"on_cancel": "method",
-#		"on_trash": "method"
-#	}
-# }
+# Tenant isolation: validate company access on all documents
+doc_events = {
+    "*": {
+        "before_insert": "infinit_restaurant.utils.isolation.validate_tenant_access",
+        "validate": "infinit_restaurant.utils.isolation.validate_tenant_access",
+    }
+}
 
 # Scheduled Tasks
 # ---------------
